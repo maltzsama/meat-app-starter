@@ -12,10 +12,19 @@ export class ShoppingCartComponent implements OnInit {
   ngOnInit() {
   }
 
-  items(): any {
+  items(): any[] {
     return this.shoppingCartServices.items;
   }
   total(): number {
     return this.shoppingCartServices.total();
+  }
+
+  removeItem(item: any) {
+    this.shoppingCartServices.removeItem(item);
+  }
+
+  addItem(item: any) {
+    console.log(item);
+    this.shoppingCartServices.addItem(item);
   }
 }

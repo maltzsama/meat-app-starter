@@ -11,16 +11,17 @@ import { RestaurantsService } from './../../restaurants/restaurants.service';
 export class MenuComponent implements OnInit {
 
   menu: Observable<MenuItem[]>;
+
   constructor(private restaurantsService: RestaurantsService,
               private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.menu = this.restaurantsService
-    .restaurantMenu(this.route.parent.snapshot.params['id']);
+      .restaurantMenu(this.route.parent.snapshot.params['id']);
   }
 
-  addMenuItem(item: MenuItem) {
-    console.log(item);
-  }
+  // addMenuItem(item: MenuItem) {
+  //   console.log(item);
+  // }
 
 }
