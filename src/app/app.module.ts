@@ -1,3 +1,4 @@
+import { ROUTES } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -20,7 +21,7 @@ import { AboutComponent } from './about/about.component'
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
